@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Get Organization Details" time="5" tests="2" failures="0" errors="0">
+   <testsuite name="Get Organization Details" tests="2" failures="0" errors="0" time="5" timestamp="2019-04-05 16:36:12" hostname="deepak.pahuja - CYG291.cybergindia.local" id="Test Suites/Get Organization Details">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="E:\\BDF Testing 2\\BDF-TestCase\\Default.Web\\Reports\\Get Organization Details\\20190405_163437"/>
+         <property name="logFiles" value="E:\\BDF Testing 2\\BDF-TestCase\\Default.Web\\Reports\\Get Organization Details\\20190405_163437\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="deepak.pahuja - CYG291.cybergindia.local"/>
+         <property name="hostAddress" value="172.25.120.220"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.0.1"/>
+      </properties>
+      <testcase name="Test Cases/API Test/Get Organization Details/Fail Without Auth" classname="Test Cases/API Test/Get Organization Details/Fail Without Auth" status="PASSED">
+         <system-out><![CDATA[2019-04-05 16:36:13 - [TEST_CASE][PASSED] - Test Cases/API Test/Get Organization Details/Fail Without Auth: Test Cases/API Test/Get Organization Details/Fail Without Auth
+
+2019-04-05 16:36:13 - [TEST_STEP][PASSED] - request = findTestObject("Org Admin/Get Organization Detail By ID"): null
+
+2019-04-05 16:36:13 - [TEST_STEP][PASSED] - response = sendRequest(request): Send request successfully
+
+2019-04-05 16:36:16 - [MESSAGE][INFO] - HAR: E:\BDF Testing 2\BDF-TestCase\Default.Web\Reports\Get Organization Details\20190405_163437\requests\main\0.har
+
+2019-04-05 16:36:16 - [MESSAGE][PASSED] - Send request successfully
+
+2019-04-05 16:36:16 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 401): Verify response status code successfully
+
+2019-04-05 16:36:16 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API Test/Get Organization Details/Succeed with Auth" classname="Test Cases/API Test/Get Organization Details/Succeed with Auth" status="PASSED">
+         <system-out><![CDATA[2019-04-05 16:36:16 - [TEST_CASE][PASSED] - Test Cases/API Test/Get Organization Details/Succeed with Auth: Test Cases/API Test/Get Organization Details/Succeed with Auth
+
+2019-04-05 16:36:16 - [TEST_STEP][PASSED] - signInRequest = findTestObject("Auth/Sign In"): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - signInResponse = sendRequest(signInRequest): Send request successfully
+
+2019-04-05 16:36:17 - [MESSAGE][INFO] - HAR: E:\BDF Testing 2\BDF-TestCase\Default.Web\Reports\Get Organization Details\20190405_163437\requests\main\1.har
+
+2019-04-05 16:36:17 - [MESSAGE][PASSED] - Send request successfully
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token)): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - Authorization = "Bearer " + token: null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - println(Authorization): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - request = findTestObject("Org Admin/Get Organization Detail By ID"): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - httpHeaderProperties.add(authHeader): null
+
+2019-04-05 16:36:17 - [TEST_STEP][PASSED] - response = sendRequest(request): Send request successfully
+
+2019-04-05 16:36:18 - [MESSAGE][INFO] - HAR: E:\BDF Testing 2\BDF-TestCase\Default.Web\Reports\Get Organization Details\20190405_163437\requests\main\2.har
+
+2019-04-05 16:36:18 - [MESSAGE][PASSED] - Send request successfully
+
+2019-04-05 16:36:18 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2019-04-05 16:36:18 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2019-04-05 16:36:18 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "message", "success"): Verify element property value successfully
+
+2019-04-05 16:36:18 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2019-04-05 16:36:18 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "isSuccess", true): Verify element property value successfully
+
+2019-04-05 16:36:18 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-04-05 16:36:12 - [TEST_SUITE][PASSED] - Get Organization Details: Test Cases/API Test/Get Organization Details/Succeed with Auth]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

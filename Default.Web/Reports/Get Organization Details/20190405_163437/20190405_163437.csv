@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Get Organization Details,,,2019-04-05 16:36:12,2019-04-05 16:36:18,5.862s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization Details/Fail Without Auth,,,2019-04-05 16:36:13,2019-04-05 16:36:16,3.607s,PASSED
+"request = findTestObject(""Org Admin/Get Organization Detail By ID"")",,,2019-04-05 16:36:13,2019-04-05 16:36:13,0.057s,PASSED
+response = sendRequest(request),,,2019-04-05 16:36:13,2019-04-05 16:36:16,3.024s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 16:36:16,2019-04-05 16:36:16,0.027s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization Details/Succeed with Auth,,,2019-04-05 16:36:16,2019-04-05 16:36:18,1.880s,PASSED
+"signInRequest = findTestObject(""Auth/Sign In"")",,,2019-04-05 16:36:16,2019-04-05 16:36:17,0.020s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.793s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.005s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.026s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.014s,PASSED
+"Authorization = ""Bearer "" + token",,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.094s,PASSED
+println(Authorization),,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.004s,PASSED
+"request = findTestObject(""Org Admin/Get Organization Detail By ID"")",,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.004s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 16:36:17,2019-04-05 16:36:17,0.007s,PASSED
+response = sendRequest(request),,,2019-04-05 16:36:17,2019-04-05 16:36:18,0.520s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 16:36:18,2019-04-05 16:36:18,0.009s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""success"")",,,2019-04-05 16:36:18,2019-04-05 16:36:18,0.042s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", true)",,,2019-04-05 16:36:18,2019-04-05 16:36:18,0.031s,PASSED

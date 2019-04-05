@@ -14,18 +14,18 @@
       <guid>2ce6bb66-b5ad-4cd5-aa92-03c8aee40f9d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Sign In/When Successful</testCaseId>
+      <testCaseId>Test Cases/API Test/Auth/Sign In/When Successful</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>849cd2ce-b407-4be6-bade-cc93a7c8d532</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Sign In/When Unsuccessful/Invalid Password</testCaseId>
+      <testCaseId>Test Cases/API Test/Auth/Sign In/When Unsuccessful/Invalid Password</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d46a0058-e796-4f95-847d-81077b5a01b3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Sign In/When Unsuccessful/Invalid Username</testCaseId>
+      <testCaseId>Test Cases/API Test/Auth/Sign In/When Unsuccessful/Invalid Username</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

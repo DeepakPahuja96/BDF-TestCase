@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Get Organization Details,,,2019-04-05 16:37:42,2019-04-05 16:37:58,16.541s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization Details/Fail Without Auth,,,2019-04-05 16:37:43,2019-04-05 16:37:55,11.806s,PASSED
+"request = findTestObject(""Org Admin/Get Organization Detail By ID"")",,,2019-04-05 16:37:44,2019-04-05 16:37:44,0.070s,PASSED
+response = sendRequest(request),,,2019-04-05 16:37:44,2019-04-05 16:37:54,10.609s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 16:37:54,2019-04-05 16:37:55,0.139s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization Details/Succeed with Auth,,,2019-04-05 16:37:55,2019-04-05 16:37:58,3.766s,PASSED
+"signInRequest = findTestObject(""Auth/Sign In"")",,,2019-04-05 16:37:56,2019-04-05 16:37:56,0.064s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-05 16:37:56,2019-04-05 16:37:57,1.021s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-05 16:37:57,2019-04-05 16:37:57,0.007s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-05 16:37:57,2019-04-05 16:37:57,0.157s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-05 16:37:57,2019-04-05 16:37:57,0.015s,PASSED
+"Authorization = ""Bearer "" + token",,,2019-04-05 16:37:57,2019-04-05 16:37:58,0.767s,PASSED
+println(Authorization),,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.010s,PASSED
+"request = findTestObject(""Org Admin/Get Organization Detail By ID"")",,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.007s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.012s,PASSED
+response = sendRequest(request),,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.518s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.004s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""success"")",,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.039s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", true)",,,2019-04-05 16:37:58,2019-04-05 16:37:58,0.058s,PASSED

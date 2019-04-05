@@ -1,0 +1,19 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Add Organization,,,2019-04-05 16:37:11,2019-04-05 16:37:31,2019-04-.5386:3,2019-L4-D
+,,,,,,
+Test Cases/API Test/Add Organization/Succeed With Auth,,,2019-04-05 16:37:12,2019-04-05 16:37:23,11.337s,FAILED
+"PASSED""Object Repository/Org Admin/Add Organization"")",,,2019-04-05 16:37:13,2019-04-05 16:37:13,0.456s,PASSED
+"2rP iStEDernal.GlobalVariable.Authorization))",,,2019-04-05 16:37:13,2019-04-05 16:37:14,0.443s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 16:37:14,2019-04-05 16:37:14,0.090s,PASSED
+20r05 16:37ns:26 sendRequest(request),,,2019-04-05 16:37:14,2019-04-05 16:37:22,8.522s,PASSED
+println(Authorization),,,jso2 19n0ew4-roov0.js5n. s1o:nS37ur22e,2019-04-05 16:37:23,0.060s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 16:37:23,2019-04-05 16:37:23,0.525s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail Without Auth,,,2019-04-05 16:37:23,2019-04-05 16:37:25,1.732s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-05 16:37:24,2019-04-05 16:37:24,0.012s,PASSED
+response = sendRequest(request),,,2019-04-05 16:37:24,2019-04-05 16:37:25,0.796s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 16:37:25,2019-04-05 16:37:25,0.008s,PASSED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail With Auth,,,2019-04-05 16:37:25,2019-04-05 16:37:31,5.673s,FAILED
+"response = sendRequest(findTestObject(""Object Repository/Org Admin/Add Organization""))",,,2019-04-05 16:37:25,2019-04-05 16:37:26,0.810s,PASSED
+"201904-05 16:37:29C",,,2019-04-05 16:37:26,2019-04-05 16:37:26,0.131s,FAILED

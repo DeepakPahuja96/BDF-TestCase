@@ -14,12 +14,12 @@
       <guid>526a84b8-6be0-43a9-b56a-7e73b550b7bb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Get Temporary Password/Fail Without Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/User Admin/Get Temporary Password/Fail Without Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c3865695-cdf7-49cd-87df-1a5455be6efb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Get Temporary Password/Succeed With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/User Admin/Get Temporary Password/Succeed With Auth</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -14,12 +14,12 @@
       <guid>31f76ffb-fe5c-4a05-bd34-80f060199157</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Get All Features/Fail Without Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Org Admin/Get All Features/Fail Without Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>318b0be5-2a86-430c-895a-faf7d21204b8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Get All Features/Succeed With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Org Admin/Get All Features/Succeed With Auth</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

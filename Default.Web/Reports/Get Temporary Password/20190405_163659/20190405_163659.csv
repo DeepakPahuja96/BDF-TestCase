@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Get Temporary Password,,,2019-04-05 16:37:54,2019-04-05 16:38:13,18.928s,FAILED
+,,,,,,
+Test Cases/API Test/Get Temporary Password/Fail Without Auth,,,2019-04-05 16:37:55,2019-04-05 16:38:10,14.435s,PASSED
+"request = findTestObject(""Object Repository/User Admin/Get Temporary Password"")",,,2019-04-05 16:37:57,2019-04-05 16:37:58,0.353s,PASSED
+response = sendRequest(request),,,2019-04-05 16:37:58,2019-04-05 16:38:10,12.267s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 16:38:10,2019-04-05 16:38:10,0.047s,PASSED
+,,,,,,
+Test Cases/API Test/Get Temporary Password/Succeed With Auth,,,2019-04-05 16:38:10,2019-04-05 16:38:12,2.387s,FAILED
+"request = findTestObject(""Object Repository/User Admin/Get Temporary Password"")",,,2019-04-05 16:38:11,2019-04-05 16:38:11,0.056s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-05 16:38:11,2019-04-05 16:38:11,0.387s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 16:38:11,2019-04-05 16:38:11,0.024s,PASSED
+response = sendRequest(request),,,2019-04-05 16:38:11,2019-04-05 16:38:12,0.934s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 16:38:12,2019-04-05 16:38:12,0.031s,FAILED

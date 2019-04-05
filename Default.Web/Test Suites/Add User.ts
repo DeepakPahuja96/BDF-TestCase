@@ -14,18 +14,18 @@
       <guid>c419fc9f-0706-4c3d-a84a-965def4af141</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Add User/Fail With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/User Admin/Add User/Should Fail If Username Or Email Already Exists</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0381f5f3-b1e8-4340-8659-c1e56bdcb528</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Add User/Fail Without Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/User Admin/Add User/Should Fail Without Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>380d1531-8a05-4cd4-a7de-02af9a5d7126</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Add User/Succeed With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/User Admin/Add User/Should Succeed With Auth</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

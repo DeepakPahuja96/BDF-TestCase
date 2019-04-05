@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Create Mail Request,,,2019-04-05 16:37:30,2019-04-05 16:37:53,23.166s,FAILED
+,,,,,,
+Test Cases/API Test/Create Mail Request/Fail With Auth,,,2019-04-05 16:37:32,2019-04-05 16:37:45,13.558s,PASSED
+"response = sendRequest(findTestObject(""Object Repository/Mail/Create Mail Request""))",,,2019-04-05 16:37:35,2019-04-05 16:37:45,10.725s,PASSED
+"verifyNotEqual(statusCode, 200)",,,2019-04-05 16:37:45,2019-04-05 16:37:45,0.210s,PASSED
+,,,,,,
+Test Cases/API Test/Create Mail Request/Fail Without Auth,,,2019-04-05 16:37:45,2019-04-05 16:37:48,2.495s,PASSED
+"request = findTestObject(""Object Repository/Mail/Create Mail Request"")",,,2019-04-05 16:37:47,2019-04-05 16:37:47,0.021s,PASSED
+response = sendRequest(request),,,2019-04-05 16:37:47,2019-04-05 16:37:48,1.093s,PASSED
+"PASSED",,,2019-04-05 16:37:48,2019-04-05 16:37:48,0.025s,PASSED
+,,,,,,
+Test Cases/API Test/Create Mail Request/Succeed with Auth,,,2019-04-05 16:37:48,2019-04-05 16:37:53,5.249s,FAILED
+"signInRequest = findTestObject(""Auth/Sign In"")",,,2019-04-05 16:37:49,2019-04-05 16:37:49,0.033s,PASSED
+sInResponse = sendRequest(signInRequest),s,,2012-04-05 16:37:04-05512:37:49,2019-04-05 16:37:49,0.865s,PASSED
+"request = findTestObject(""Object Repository/Mail/Create Mail Request"")",,,2019-04-05 16:37:49,2019-04-05 16:37:49,0.010s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-05 16:37:49,2019-04-05 16:37:49,0.009s,PASSED
+hseText(signInResponse.getResponseB2dyC0t-nt )),,,2-02 19:03-:09,2019-04-05 16:37:50,0.154s,PASSED
+"019-04-05 ",,P,2019-04-05 16:37:50,2019-04-05 16:37:50,0.023s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 16:37:50,2019-04-05 16:37:50,0.064s,PASSED
+response = sendRequest(request),,,2019-04-05 16:37:50,2019-04-05 16:37:50,0.597s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 16:37:50,2019-04-05 16:37:53,2.931s,FAILED
