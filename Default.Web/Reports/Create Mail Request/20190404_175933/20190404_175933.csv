@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Create Mail Request,,,2019-04-04 18:00:19,2019-04-04 18:00:27,7.845s,FAILED
+,,,,,,
+Test Cases/API Test/Create Mail Request/Fail With Auth,,,2019-04-04 18:00:20,2019-04-04 18:00:24,4.378s,PASSED
+"response = sendRequest(findTestObject(""Object Repository/Mail/Create Mail Request""))",,,2019-04-04 18:00:20,2019-04-04 18:00:24,3.620s,PASSED
+"verifyNotEqual(statusCode, 200)",,,2019-04-04 18:00:24,2019-04-04 18:00:24,0.049s,PASSED
+,,,,,,
+Test Cases/API Test/Create Mail Request/Fail Without Auth,,,2019-04-04 18:00:24,2019-04-04 18:00:25,0.990s,PASSED
+"request = findTestObject(""Object Repository/Mail/Create Mail Request"")",,,2019-04-04 18:00:24,2019-04-04 18:00:24,0.015s,PASSED
+response = sendRequest(request),,,2019-04-04 18:00:24,2019-04-04 18:00:25,0.590s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 18:00:25,2019-04-04 18:00:25,0.015s,PASSED
+,,,,,,
+Test Cases/API Test/Create Mail Request/Succeed with Auth,,,2019-04-04 18:00:25,2019-04-04 18:00:27,1.919s,FAILED
+"signInRequest = findTestObject(""Auth/Sign In"")",,,2019-04-04 18:00:25,2019-04-04 18:00:25,0.009s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-04 18:00:25,2019-04-04 18:00:26,0.837s,PASSED
+"request = findTestObject(""Object Repository/Mail/Create Mail Request"")",,,2019-04-04 18:00:26,2019-04-04 18:00:26,0.012s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-04 18:00:26,2019-04-04 18:00:26,0.011s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-04 18:00:26,2019-04-04 18:00:26,0.028s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-04 18:00:26,2019-04-04 18:00:26,0.029s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-04 18:00:26,2019-04-04 18:00:26,0.018s,PASSED
+response = sendRequest(request),,,2019-04-04 18:00:26,2019-04-04 18:00:27,0.547s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-04 18:00:27,2019-04-04 18:00:27,0.043s,FAILED

@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Get Organization List,,,2019-04-04 14:43:00,2019-04-04 14:43:09,9.310s,FAILED
+,,,,,,
+Test Cases/API Test/Get Organization List/Succeed With Auth,,,2019-04-04 14:43:01,2019-04-04 14:43:07,6.909s,PASSED
+"signInRequest = findTestObject(""Auth/Sign In"")",,,2019-04-04 14:43:01,2019-04-04 14:43:01,0.159s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-04 14:43:01,2019-04-04 14:43:06,4.348s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Get Organization List"")",,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.011s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.011s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.053s,PASSED
+"GlobalVariableHelper.addGlobalVariable(""Authorization"", ""Bearer "" + token)",,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.393s,PASSED
+"Authorization = ""Bearer "" + token",,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.003s,PASSED
+println(Authorization),,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.016s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.024s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.018s,PASSED
+"Authorization = ""Bearer "" + token",,,2019-04-04 14:43:06,2019-04-04 14:43:06,0.004s,PASSED
+response = sendRequest(request),,,2019-04-04 14:43:06,2019-04-04 14:43:07,0.989s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-04 14:43:07,2019-04-04 14:43:07,0.019s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", true)",,,2019-04-04 14:43:07,2019-04-04 14:43:07,0.083s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization List/Fail Without Auth,,,2019-04-04 14:43:07,2019-04-04 14:43:09,1.754s,FAILED
+"request = findTestObject(""Org Admin/Get Organization List"")",,,2019-04-04 14:43:08,2019-04-04 14:43:08,0.012s,PASSED
+response = sendRequest(request),,,2019-04-04 14:43:08,2019-04-04 14:43:09,1.283s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 14:43:09,2019-04-04 14:43:09,0.038s,FAILED

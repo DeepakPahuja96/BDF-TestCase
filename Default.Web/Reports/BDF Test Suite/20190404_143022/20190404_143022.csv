@@ -1,0 +1,25 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+BDF Test Suite,,,2019-04-04 14:30:25,2019-04-04 14:30:33,8.349s,FAILED
+,,,,,,
+Test Cases/API Test/Get Organization List/Succeed With Auth,,,2019-04-04 14:30:26,2019-04-04 14:30:31,5.591s,FAILED
+"signInRequest = findTestObject(""Auth/Sign In"")",,,2019-04-04 14:30:26,2019-04-04 14:30:26,0.118s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-04 14:30:26,2019-04-04 14:30:31,4.353s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Get Organization List"")",,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.012s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.009s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.045s,PASSED
+"GlobalVariableHelper.addGlobalVariable(""Authorization"", ""Bearer "" + token)",,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.273s,PASSED
+"Authorization = ""Bearer "" + token",,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.002s,PASSED
+println(Authorization),,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.013s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.025s,PASSED
+httpHeaderProperties.add(Authorization),,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.044s,PASSED
+response = sendRequest(request),,,2019-04-04 14:30:31,2019-04-04 14:30:31,0.080s,FAILED
+,,,,,,
+Test Cases/API Test/Get Organization List/Fail Without Auth,,,2019-04-04 14:30:31,2019-04-04 14:30:33,1.832s,FAILED
+"request = findTestObject(""Org Admin/Get Organization List"")",,,2019-04-04 14:30:32,2019-04-04 14:30:32,0.017s,PASSED
+response = sendRequest(request),,,2019-04-04 14:30:32,2019-04-04 14:30:33,1.331s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 14:30:33,2019-04-04 14:30:33,0.058s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Succeed With Auth,,,2019-04-04 14:30:33,2019-04-04 14:30:33,0.411s,FAILED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-04 14:30:33,2019-04-04 14:30:33,0.020s,PASSED
+httpHeaderProperties.add(Authorization),,,2019-04-04 14:30:33,2019-04-04 14:30:33,0.002s,PASSED
+response = sendRequest(request),,,2019-04-04 14:30:33,2019-04-04 14:30:33,0.058s,FAILED

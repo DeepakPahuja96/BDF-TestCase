@@ -1,0 +1,16 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Get All Features,,,2019-04-04 18:00:31,2019-04-04 18:00:37,6.847s,FAILED
+,,,,,,
+Test Cases/API Test/Get All Features/Fail Without Auth,,,2019-04-04 18:00:31,2019-04-04 18:00:36,4.826s,FAILED
+"request = findTestObject(""Object Repository/Org Admin/Get All Features"")",,,2019-04-04 18:00:32,2019-04-04 18:00:32,0.061s,PASSED
+response = sendRequest(request),,,2019-04-04 18:00:32,2019-04-04 18:00:36,4.024s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 18:00:36,2019-04-04 18:00:36,0.055s,FAILED
+,,,,,,
+Test Cases/API Test/Get All Features/Succeed With Auth,,,2019-04-04 18:00:36,2019-04-04 18:00:37,1.452s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Get All Features"")",,,2019-04-04 18:00:36,2019-04-04 18:00:36,0.006s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-04 18:00:36,2019-04-04 18:00:36,0.120s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-04 18:00:36,2019-04-04 18:00:36,0.014s,PASSED
+response = sendRequest(request),,,2019-04-04 18:00:36,2019-04-04 18:00:37,0.807s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-04 18:00:37,2019-04-04 18:00:37,0.009s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""success"")",,,2019-04-04 18:00:37,2019-04-04 18:00:37,0.094s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", true)",,,2019-04-04 18:00:37,2019-04-04 18:00:37,0.027s,PASSED

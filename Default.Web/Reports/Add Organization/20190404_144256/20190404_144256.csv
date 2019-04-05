@@ -1,0 +1,21 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Add Organization,,,2019-04-04 14:43:14,2019-04-04 14:43:23,9.288s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Succeed With Auth,,,2019-04-04 14:43:15,2019-04-04 14:43:20,5.579s,FAILED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-04 14:43:16,2019-04-04 14:43:16,0.209s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-04 14:43:16,2019-04-04 14:43:16,0.201s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-04 14:43:16,2019-04-04 14:43:16,0.018s,PASSED
+response = sendRequest(request),,,2019-04-04 14:43:16,2019-04-04 14:43:20,4.195s,PASSED
+println(Authorization),,,2019-04-04 14:43:20,2019-04-04 14:43:20,0.007s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-04 14:43:20,2019-04-04 14:43:20,0.060s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail Without Auth,,,2019-04-04 14:43:21,2019-04-04 14:43:22,1.209s,FAILED
+"request = findTestObject(""Org Admin/Add Organization"")",,,2019-04-04 14:43:21,2019-04-04 14:43:21,0.012s,PASSED
+response = sendRequest(request),,,2019-04-04 14:43:21,2019-04-04 14:43:22,0.801s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 14:43:22,2019-04-04 14:43:22,0.010s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail With Auth,,,2019-04-04 14:43:22,2019-04-04 14:43:23,1.466s,PASSED
+"response = sendRequest(findTestObject(""Object Repository/Org Admin/Add Organization""))",,,2019-04-04 14:43:22,2019-04-04 14:43:23,0.846s,PASSED
+"verifyEqual(statusCode, 200)",,,2019-04-04 14:43:23,2019-04-04 14:43:23,0.102s,PASSED
+"verifyNotEqual(statusCode, 401)",,,2019-04-04 14:43:23,2019-04-04 14:43:23,0.029s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Organization with this name already Exist !"")",,,2019-04-04 14:43:23,2019-04-04 14:43:23,0.109s,PASSED

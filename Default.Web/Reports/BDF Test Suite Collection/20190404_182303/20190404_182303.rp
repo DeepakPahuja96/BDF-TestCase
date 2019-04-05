@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportCollectionEntity>
+   <description></description>
+   <name>20190404_182303</name>
+   <tag></tag>
+   <displayName>20190404_182303</displayName>
+   <reportItemDescriptions>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get Organization List/20190404_182303</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Add Organization/20190404_182304</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Add User/20190404_182305</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Create Mail Request/20190404_182306</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get All Features/20190404_182307</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get Country States/20190404_182308</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get Organization Details/20190404_182309</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get Temporary Password/20190404_182310</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get User List/20190404_182311</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Mail History List/20190404_182312</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Mailing Instructions/20190404_182313</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Sign In/20190404_182314</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+   </reportItemDescriptions>
+</ReportCollectionEntity>

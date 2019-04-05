@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportCollectionEntity>
+   <description></description>
+   <name>20190404_144617</name>
+   <tag></tag>
+   <displayName>20190404_144617</displayName>
+   <reportItemDescriptions>
+      <ReportItemDescription>
+         <reportLocation>Reports/Get Organization List/20190404_144617</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+      <ReportItemDescription>
+         <reportLocation>Reports/Add Organization/20190404_144618</reportLocation>
+         <runConfigDescription>
+            <groupName>Web Service</groupName>
+            <profileName>BDF</profileName>
+            <runConfigurationId>Web Service</runConfigurationId>
+         </runConfigDescription>
+      </ReportItemDescription>
+   </reportItemDescriptions>
+</ReportCollectionEntity>

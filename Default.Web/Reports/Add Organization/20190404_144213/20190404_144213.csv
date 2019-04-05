@@ -1,0 +1,21 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Add Organization,,,2019-04-04 14:42:31,2019-04-04 14:42:40,9.213s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Succeed With Auth,,,2019-04-04 14:42:31,2019-04-04 14:42:37,5.826s,FAILED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-04 14:42:32,2019-04-04 14:42:32,0.232s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-04 14:42:32,2019-04-04 14:42:33,0.203s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-04 14:42:33,2019-04-04 14:42:33,0.020s,PASSED
+response = sendRequest(request),,,2019-04-04 14:42:33,2019-04-04 14:42:37,4.259s,PASSED
+println(Authorization),,,2019-04-04 14:42:37,2019-04-04 14:42:37,0.007s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-04 14:42:37,2019-04-04 14:42:37,0.045s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail Without Auth,,,2019-04-04 14:42:37,2019-04-04 14:42:38,1.376s,FAILED
+"request = findTestObject(""Org Admin/Add Organization"")",,,2019-04-04 14:42:37,2019-04-04 14:42:37,0.027s,PASSED
+response = sendRequest(request),,,2019-04-04 14:42:37,2019-04-04 14:42:38,0.867s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 14:42:38,2019-04-04 14:42:38,0.011s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail With Auth,,,2019-04-04 14:42:38,2019-04-04 14:42:40,1.386s,PASSED
+"response = sendRequest(findTestObject(""Object Repository/Org Admin/Add Organization""))",,,2019-04-04 14:42:39,2019-04-04 14:42:40,0.868s,PASSED
+"verifyEqual(statusCode, 200)",,,2019-04-04 14:42:40,2019-04-04 14:42:40,0.066s,PASSED
+"verifyNotEqual(statusCode, 401)",,,2019-04-04 14:42:40,2019-04-04 14:42:40,0.028s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Organization with this name already Exist !"")",,,2019-04-04 14:42:40,2019-04-04 14:42:40,0.073s,PASSED

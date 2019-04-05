@@ -1,0 +1,18 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+BDF Test Suite,,,2019-04-04 13:01:28,2019-04-04 13:01:35,6.525s,FAILED
+,,,,,,
+Test Cases/API Test/Get Organization List/Succeed With Auth,,,2019-04-04 13:01:29,2019-04-04 13:01:33,3.842s,FAILED
+"request = findTestObject(""Org Admin/Get Organization List"")",,,2019-04-04 13:01:30,2019-04-04 13:01:30,0.053s,PASSED
+httpHeaderProperties.add(Authorization),,,2019-04-04 13:01:30,2019-04-04 13:01:30,0.208s,PASSED
+response = sendRequest(request),,,2019-04-04 13:01:30,2019-04-04 13:01:33,2.740s,FAILED
+,,,,,,
+Test Cases/API Test/Get Organization List/Fail Without Auth,,,2019-04-04 13:01:33,2019-04-04 13:01:34,1.574s,PASSED
+"request = findTestObject(""Org Admin/Get Organization List"")",,,2019-04-04 13:01:33,2019-04-04 13:01:33,0.014s,PASSED
+response = sendRequest(request),,,2019-04-04 13:01:33,2019-04-04 13:01:34,0.986s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 13:01:34,2019-04-04 13:01:34,0.093s,PASSED
+println(Authorization),,,2019-04-04 13:01:34,2019-04-04 13:01:34,0.044s,PASSED
+,,,,,,
+Test Cases/API Test/Add Organization/Succeed With Auth,,,2019-04-04 13:01:34,2019-04-04 13:01:35,0.483s,FAILED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-04 13:01:35,2019-04-04 13:01:35,0.019s,PASSED
+httpHeaderProperties.add(Authorization),,,2019-04-04 13:01:35,2019-04-04 13:01:35,0.001s,PASSED
+response = sendRequest(request),,,2019-04-04 13:01:35,2019-04-04 13:01:35,0.043s,FAILED

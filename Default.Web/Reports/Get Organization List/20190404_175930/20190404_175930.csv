@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Get Organization List,,,2019-04-04 17:59:44,2019-04-04 17:59:52,7.945s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization List/Succeed With Auth,,,2019-04-04 17:59:45,2019-04-04 17:59:51,6.151s,PASSED
+"signInRequest = findTestObject(""Object Repository/Auth/Sign In"")",,,2019-04-04 17:59:46,2019-04-04 17:59:46,0.058s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-04 17:59:46,2019-04-04 17:59:50,3.999s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Get Organization List"")",,,2019-04-04 17:59:50,2019-04-04 17:59:50,0.020s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-04 17:59:50,2019-04-04 17:59:50,0.013s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-04 17:59:50,2019-04-04 17:59:50,0.062s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-04 17:59:50,2019-04-04 17:59:50,0.035s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-04 17:59:50,2019-04-04 17:59:50,0.033s,PASSED
+"Authorization = ""Bearer "" + token",,,2019-04-04 17:59:50,2019-04-04 17:59:50,0.322s,PASSED
+response = sendRequest(request),,,2019-04-04 17:59:50,2019-04-04 17:59:51,0.989s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-04 17:59:51,2019-04-04 17:59:51,0.018s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", true)",,,2019-04-04 17:59:51,2019-04-04 17:59:51,0.046s,PASSED
+,,,,,,
+Test Cases/API Test/Get Organization List/Fail Without Auth,,,2019-04-04 17:59:51,2019-04-04 17:59:52,1.010s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Get Organization List"")",,,2019-04-04 17:59:52,2019-04-04 17:59:52,0.010s,PASSED
+response = sendRequest(request),,,2019-04-04 17:59:52,2019-04-04 17:59:52,0.622s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-04 17:59:52,2019-04-04 17:59:52,0.004s,PASSED
