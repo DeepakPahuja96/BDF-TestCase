@@ -18,18 +18,32 @@ import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import groovy.json.JsonSlurper as JsonSlurper
 
-//RequestObject signInRequest = findTestObject('Auth/Sign In')
+RequestObject signInRequest = findTestObject('Auth/Sign In') 
 //
-//signInResponse = WS.sendRequest(signInRequest)
+signInResponse = WS.sendRequest(signInRequest) 
+//
+JsonSlurper jsonSlurper = new JsonSlurper()
+//
+Map signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent())
+//
+TestObjectProperty authHeader = new TestObjectProperty('Authorization', ConditionType.EQUALS,  
+															'Bearer ' + signInResponseBody.data.token)  
+//
+GlobalVariable.Authorization = 'Bearer ' + signInResponseBody.data.token  
+
+// -------------------------    COMMENT above lines if test suite collection is running
+
+// -------------------------    UNCOMMENT below 2 lines if test suite collection is running
+
+
+//TestObjectProperty authHeader = new TestObjectProperty('Authorization', ConditionType.EQUALS,
+//														'Bearer ' + GlobalVariable.Authorization)
+
+
+
+println(GlobalVariable.Authorization)
 
 RequestObject request = findTestObject('Org Admin/Get Organization Detail By ID')
-
-//JsonSlurper jsonSlurper = new JsonSlurper()
-//
-//Map signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent())
-
-TestObjectProperty authHeader = new TestObjectProperty('Authorization', ConditionType.EQUALS, 
-														'Bearer ' + GlobalVariable.Authorization)
 
 request.httpHeaderProperties.add(authHeader)
 
@@ -40,6 +54,4 @@ WS.verifyResponseStatusCode(response, 200)
 WS.verifyElementPropertyValue(response, 'message', 'success')
 
 WS.verifyElementPropertyValue(response, 'isSuccess', true)
-
-
 
