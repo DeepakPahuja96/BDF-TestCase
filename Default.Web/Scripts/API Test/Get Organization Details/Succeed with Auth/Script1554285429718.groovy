@@ -18,7 +18,7 @@ import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
 import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import groovy.json.JsonSlurper as JsonSlurper
 
-RequestObject signInRequest = findTestObject('Auth/Sign In') 
+RequestObject signInRequest =  findTestObject('Object Repository/Auth/Sign In')
 //
 signInResponse = WS.sendRequest(signInRequest) 
 //
@@ -43,7 +43,7 @@ GlobalVariable.Authorization = 'Bearer ' + signInResponseBody.data.token
 
 println(GlobalVariable.Authorization)
 
-RequestObject request = findTestObject('Org Admin/Get Organization Detail By ID')
+RequestObject request = findTestObject('Object Repository/Org Admin/Get Organization Detail By ID')
 
 request.httpHeaderProperties.add(authHeader)
 

@@ -1,0 +1,14 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Mailing Instructions,,,2019-04-05 12:01:14,2019-04-05 12:01:19,5.632s,FAILED
+,,,,,,
+Test Cases/API Test/Mailing Instructions/Fail Without Auth,,,2019-04-05 12:01:14,2019-04-05 12:01:18,4.116s,PASSED
+"request = findTestObject(""Object Repository/Mail/Mailing Instruction"")",,,2019-04-05 12:01:15,2019-04-05 12:01:15,0.051s,PASSED
+response = sendRequest(request),,,2019-04-05 12:01:15,2019-04-05 12:01:18,3.371s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 12:01:18,2019-04-05 12:01:18,0.017s,PASSED
+,,,,,,
+Test Cases/API Test/Mailing Instructions/Succeed With Auth,,,2019-04-05 12:01:18,2019-04-05 12:01:19,1.044s,FAILED
+"request = findTestObject(""Object Repository/Mail/Mailing Instruction"")",,,2019-04-05 12:01:19,2019-04-05 12:01:19,0.008s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-05 12:01:19,2019-04-05 12:01:19,0.117s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 12:01:19,2019-04-05 12:01:19,0.014s,PASSED
+response = sendRequest(request),,,2019-04-05 12:01:19,2019-04-05 12:01:19,0.591s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 12:01:19,2019-04-05 12:01:19,0.021s,FAILED

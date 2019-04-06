@@ -14,12 +14,12 @@
       <guid>e66ef408-8b34-4f62-b592-78ece4bf66da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Mail History List/Fail Without Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Mail/Mail History List/Fail Without Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6e6484cd-00ec-42d6-95ef-9647a0104d79</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Mail History List/Succeed with Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Mail/Mail History List/Succeed with Auth</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

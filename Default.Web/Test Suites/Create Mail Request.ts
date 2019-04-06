@@ -14,18 +14,18 @@
       <guid>c8a2504f-3e13-4799-82c4-ad8bf3af82c3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Create Mail Request/Fail With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Mail/Create Mail Request/Fail With Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4899a5bc-3508-4de6-b915-8a0b0d18d938</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Create Mail Request/Fail Without Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Mail/Create Mail Request/Fail Without Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8f3635aa-ac2e-4619-bae8-93de3e3c0290</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Create Mail Request/Succeed with Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Mail/Create Mail Request/Succeed with Auth</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,0 +1,18 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Sign In,,,2019-04-05 12:05:04,2019-04-05 12:05:14,9.536s,FAILED
+,,,,,,
+Test Cases/API Test/Sign In/When Successful,,,2019-04-05 12:05:05,2019-04-05 12:05:10,5.327s,PASSED
+"sendRequest(findTestObject(""Object Repository/Auth/Sign In""))",,,2019-04-05 12:05:05,2019-04-05 12:05:09,3.610s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/Auth/Sign In""))",,,2019-04-05 12:05:09,2019-04-05 12:05:10,1.017s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", true)",,,2019-04-05 12:05:10,2019-04-05 12:05:10,0.071s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully Authenticated !"")",,,2019-04-05 12:05:10,2019-04-05 12:05:10,0.025s,PASSED
+,,,,,,
+Test Cases/API Test/Sign In/When Unsuccessful/Invalid Password,,,2019-04-05 12:05:10,2019-04-05 12:05:12,1.849s,FAILED
+"sendRequest(findTestObject(""Object Repository/Auth/Sign In""))",,,2019-04-05 12:05:10,2019-04-05 12:05:11,0.877s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/Auth/Sign In""))",,,2019-04-05 12:05:11,2019-04-05 12:05:12,0.685s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", false)",,,2019-04-05 12:05:12,2019-04-05 12:05:12,0.041s,FAILED
+,,,,,,
+Test Cases/API Test/Sign In/When Unsuccessful/Invalid Username,,,2019-04-05 12:05:12,2019-04-05 12:05:14,1.839s,FAILED
+"sendRequest(findTestObject(""Object Repository/Auth/Sign In""))",,,2019-04-05 12:05:12,2019-04-05 12:05:13,0.800s,PASSED
+"response = sendRequestAndVerify(findTestObject(""Object Repository/Auth/Sign In""))",,,2019-04-05 12:05:13,2019-04-05 12:05:14,0.675s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", false)",,,2019-04-05 12:05:14,2019-04-05 12:05:14,0.049s,FAILED

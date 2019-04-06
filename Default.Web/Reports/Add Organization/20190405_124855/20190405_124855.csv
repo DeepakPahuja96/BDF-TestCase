@@ -1,0 +1,19 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Add Organization,,,2019-04-05 12:49:13,2019-04-05 12:49:43,29.966s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Succeed With Auth,,,2019-04-05 12:49:15,2019-04-05 12:49:38,23.310s,FAILED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-05 12:49:19,2019-04-05 12:49:20,0.780s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-05 12:49:20,2019-04-05 12:49:21,0.950s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 12:49:21,2019-04-05 12:49:21,0.123s,PASSED
+response = sendRequest(request),,,2019-04-05 12:49:21,2019-04-05 12:49:38,16.409s,PASSED
+println(Authorization),,,2019-04-05 12:49:38,2019-04-05 12:49:38,0.108s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 12:49:38,2019-04-05 12:49:38,0.203s,FAILED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail Without Auth,,,2019-04-05 12:49:38,2019-04-05 12:49:41,3.385s,PASSED
+"request = findTestObject(""Object Repository/Org Admin/Add Organization"")",,,2019-04-05 12:49:40,2019-04-05 12:49:40,0.012s,PASSED
+response = sendRequest(request),,,2019-04-05 12:49:40,2019-04-05 12:49:41,1.359s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 12:49:41,2019-04-05 12:49:41,0.035s,PASSED
+,,,,,,
+Test Cases/API Test/Add Organization/Fail With Auth,,,2019-04-05 12:49:41,2019-04-05 12:49:43,1.688s,FAILED
+"response = sendRequest(findTestObject(""Object Repository/Org Admin/Add Organization""))",,,2019-04-05 12:49:42,2019-04-05 12:49:43,0.667s,PASSED
+"verifyEqual(statusCode, 200)",,,2019-04-05 12:49:43,2019-04-05 12:49:43,0.098s,FAILED

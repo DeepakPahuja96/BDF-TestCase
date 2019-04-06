@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Should Fail When There Is Bad Request</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>34c2918c-90ae-4a23-90d9-682a9ac089e4</testCaseGuid>
+</TestCaseEntity>

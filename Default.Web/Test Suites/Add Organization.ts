@@ -14,18 +14,18 @@
       <guid>9c4cf733-21ef-44ed-8566-20994b5bce09</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Add Organization/Succeed With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Org Admin/Add Organization/Should Succeed With Unique Organization Name</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6b69b2e8-a310-4eba-ae20-0953751bb093</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Add Organization/Fail Without Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Org Admin/Add Organization/Should Fail Without Auth</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3f257da5-b684-4261-98f4-60a13b3e93e1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/Add Organization/Fail With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/Org Admin/Add Organization/Should Fail When Organization With Same Name Is Provided</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
