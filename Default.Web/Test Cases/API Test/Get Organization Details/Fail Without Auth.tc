@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Fail Without Auth</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>541ea06a-295b-4401-b86a-edc8385c70eb</testCaseGuid>
-</TestCaseEntity>

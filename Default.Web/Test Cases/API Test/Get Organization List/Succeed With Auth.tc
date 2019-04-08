@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Succeed With Auth</name>
-   <tag>User, Get</tag>
-   <comment></comment>
-   <testCaseGuid>67017358-2622-4c64-ae3c-ab032377877a</testCaseGuid>
-</TestCaseEntity>
