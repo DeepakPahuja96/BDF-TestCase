@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Should Succeed With Auth</name>
+   <name>Should fail If Email Or UserName Is Null</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>3e0ce54e-314a-40b1-9092-7002d1957742</testCaseGuid>
+   <testCaseGuid>10eb266d-aec0-4861-b951-61d5541fabfa</testCaseGuid>
 </TestCaseEntity>

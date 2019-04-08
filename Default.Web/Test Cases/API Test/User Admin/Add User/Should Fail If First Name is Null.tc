@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Should Fail If First Name is Null</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e713b7aa-8c7c-4f98-abb9-790660c8b2e9</testCaseGuid>
+</TestCaseEntity>

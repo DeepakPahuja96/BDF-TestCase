@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Should fail If CountryStateID Field Is Null</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>666b9541-76ff-4b95-877e-ebdf467d41c0</testCaseGuid>
+</TestCaseEntity>

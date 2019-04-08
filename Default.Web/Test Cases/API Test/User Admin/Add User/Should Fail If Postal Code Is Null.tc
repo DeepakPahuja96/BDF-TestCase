@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Should Fail If Postal Code Is Null</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>aca77695-f969-4c7e-8c92-6e47b5aeeebd</testCaseGuid>
+</TestCaseEntity>

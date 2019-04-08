@@ -14,9 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\DEEPAK~1.PAH\\AppData\\Local\\Temp\\Katalon\\Test Cases\\API Test\\User Admin\\Add User\\Should Succeed With Auth\\20190408_114937\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\DEEPAK~1.PAH\\AppData\\Local\\Temp\\Katalon\\Test Cases\\API Test\\User Admin\\Add User\\Should Fail If UserPassword Field Is Null\\20190408_125025\\execution.properties')
 
 TestCaseMain.beforeStart()
 
-        TestCaseMain.runTestCase('Test Cases/API Test/User Admin/Add User/Should Succeed With Auth', new TestCaseBinding('Test Cases/API Test/User Admin/Add User/Should Succeed With Auth',[:]), FailureHandling.STOP_ON_FAILURE , false)
+        TestCaseMain.runTestCase('Test Cases/API Test/User Admin/Add User/Should Fail If UserPassword Field Is Null', new TestCaseBinding('Test Cases/API Test/User Admin/Add User/Should Fail If UserPassword Field Is Null',[:]), FailureHandling.STOP_ON_FAILURE , false)
     

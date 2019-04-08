@@ -32,6 +32,6 @@
       <guid>933bf862-8c2f-4fb3-832b-36ae3cfcbc27</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Test/User Admin/Add User/Should Succeed With Auth</testCaseId>
+      <testCaseId>Test Cases/API Test/User Admin/Add User/Should Succeed With Auth And All Required Fields Given</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
