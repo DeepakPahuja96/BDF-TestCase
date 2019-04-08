@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Get Organization List" time="7" tests="2" failures="0" errors="0">
+   <testsuite name="Get Organization List" tests="2" failures="0" errors="0" time="7" timestamp="2019-04-05 15:12:22" hostname="srishty.rawat - CYG188.cybergindia.local" id="Test Suites/Get Organization List">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\srishty.rawat\\Desktop\\Default.Web\\Reports\\Get Organization List\\20190405_151217"/>
+         <property name="logFiles" value="C:\\Users\\srishty.rawat\\Desktop\\Default.Web\\Reports\\Get Organization List\\20190405_151217\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="srishty.rawat - CYG188.cybergindia.local"/>
+         <property name="hostAddress" value="172.25.123.190"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.1.0.1"/>
+      </properties>
+      <testcase name="Test Cases/API Test/Get Organization List/Succeed With Auth" classname="Test Cases/API Test/Get Organization List/Succeed With Auth" status="PASSED">
+         <system-out><![CDATA[2019-04-05 15:12:22 - [TEST_CASE][PASSED] - Test Cases/API Test/Get Organization List/Succeed With Auth: Test Cases/API Test/Get Organization List/Succeed With Auth
+
+2019-04-05 15:12:23 - [TEST_STEP][PASSED] - signInRequest = findTestObject("Object Repository/Auth/Sign In"): null
+
+2019-04-05 15:12:23 - [TEST_STEP][PASSED] - signInResponse = sendRequest(signInRequest): Send request successfully
+
+2019-04-05 15:12:27 - [MESSAGE][INFO] - HAR: C:\Users\srishty.rawat\Desktop\Default.Web\Reports\Get Organization List\20190405_151217\requests\main\0.har
+
+2019-04-05 15:12:27 - [MESSAGE][PASSED] - Send request successfully
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - request = findTestObject("Object Repository/Org Admin/Get Organization List"): null
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()): null
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token)): null
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - httpHeaderProperties.add(authHeader): null
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - Authorization = "Bearer " + token: null
+
+2019-04-05 15:12:27 - [TEST_STEP][PASSED] - response = sendRequest(request): Send request successfully
+
+2019-04-05 15:12:28 - [MESSAGE][INFO] - HAR: C:\Users\srishty.rawat\Desktop\Default.Web\Reports\Get Organization List\20190405_151217\requests\main\1.har
+
+2019-04-05 15:12:28 - [MESSAGE][PASSED] - Send request successfully
+
+2019-04-05 15:12:28 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2019-04-05 15:12:28 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2019-04-05 15:12:28 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "isSuccess", true): Verify element property value successfully
+
+2019-04-05 15:12:28 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/API Test/Get Organization List/Fail Without Auth" classname="Test Cases/API Test/Get Organization List/Fail Without Auth" status="PASSED">
+         <system-out><![CDATA[2019-04-05 15:12:28 - [TEST_CASE][PASSED] - Test Cases/API Test/Get Organization List/Fail Without Auth: Test Cases/API Test/Get Organization List/Fail Without Auth
+
+2019-04-05 15:12:29 - [TEST_STEP][PASSED] - request = findTestObject("Object Repository/Org Admin/Get Organization List"): null
+
+2019-04-05 15:12:29 - [TEST_STEP][PASSED] - response = sendRequest(request): Send request successfully
+
+2019-04-05 15:12:29 - [MESSAGE][INFO] - HAR: C:\Users\srishty.rawat\Desktop\Default.Web\Reports\Get Organization List\20190405_151217\requests\main\2.har
+
+2019-04-05 15:12:29 - [MESSAGE][PASSED] - Send request successfully
+
+2019-04-05 15:12:29 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 401): Verify response status code successfully
+
+2019-04-05 15:12:29 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-04-05 15:12:22 - [TEST_SUITE][PASSED] - Get Organization List: Test Cases/API Test/Get Organization List/Fail Without Auth]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

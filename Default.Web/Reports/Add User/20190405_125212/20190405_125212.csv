@@ -1,0 +1,27 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Add User,,,2019-04-05 12:52:48,2019-04-05 12:52:55,7.908s,FAILED
+,,,,,,
+Test Cases/API Test/Add User/Fail With Auth,,,2019-04-05 12:52:48,2019-04-05 12:52:53,5.237s,PASSED
+"signInRequest = findTestObject(""Object Repository/Auth/Sign In"")",,,2019-04-05 12:52:49,2019-04-05 12:52:49,0.170s,PASSED
+signInResponse = sendRequest(signInRequest),,,2019-04-05 12:52:49,2019-04-05 12:52:53,3.623s,PASSED
+"request = findTestObject(""Object Repository/User Admin/Add User"")",,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.010s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.008s,PASSED
+signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent()),,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.028s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + signInResponseBody.data.token))",,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.026s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.017s,PASSED
+response = sendRequest(request),,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.492s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.016s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""The entered username/email is already exists in our database, it may be associated with a user in different organization."")",,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.067s,PASSED
+"verifyElementPropertyValue(response, ""isSuccess"", false)",,,2019-04-05 12:52:53,2019-04-05 12:52:53,0.027s,PASSED
+,,,,,,
+Test Cases/API Test/Add User/Fail Without Auth,,,2019-04-05 12:52:53,2019-04-05 12:52:54,0.925s,PASSED
+"request = findTestObject(""Object Repository/User Admin/Add User"")",,,2019-04-05 12:52:54,2019-04-05 12:52:54,0.009s,PASSED
+response = sendRequest(request),,,2019-04-05 12:52:54,2019-04-05 12:52:54,0.600s,PASSED
+"verifyResponseStatusCode(response, 401)",,,2019-04-05 12:52:54,2019-04-05 12:52:54,0.008s,PASSED
+,,,,,,
+Test Cases/API Test/Add User/Succeed With Auth,,,2019-04-05 12:52:54,2019-04-05 12:52:55,1.114s,FAILED
+"request = findTestObject(""Object Repository/User Admin/Add User"")",,,2019-04-05 12:52:55,2019-04-05 12:52:55,0.010s,PASSED
+"authHeader = new com.kms.katalon.core.testobject.TestObjectProperty(Authorization, com.kms.katalon.core.testobject.ConditionType.EQUALS, (Bearer  + internal.GlobalVariable.Authorization))",,,2019-04-05 12:52:55,2019-04-05 12:52:55,0.132s,PASSED
+httpHeaderProperties.add(authHeader),,,2019-04-05 12:52:55,2019-04-05 12:52:55,0.001s,PASSED
+response = sendRequest(request),,,2019-04-05 12:52:55,2019-04-05 12:52:55,0.664s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2019-04-05 12:52:55,2019-04-05 12:52:55,0.021s,FAILED
