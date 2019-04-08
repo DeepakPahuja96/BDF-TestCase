@@ -14,7 +14,7 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\DEEPAK~1.PAH\\AppData\\Local\\Temp\\Katalon\\Test Cases\\API Test\\User Admin\\Add User\\Should Fail if Last Name is Null\\20190405_194914\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\DEEPAK~1.PAH\\AppData\\Local\\Temp\\Katalon\\Test Cases\\API Test\\User Admin\\Add User\\Should Fail if Last Name is Null\\20190405_203209\\execution.properties')
 
 TestCaseMain.beforeStart()
 

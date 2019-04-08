@@ -22,13 +22,13 @@ RequestObject signInRequest = findTestObject('Object Repository/Auth/Sign In')
 
 signInResponse = WS.sendRequest(signInRequest)
 
-RequestObject request = findTestObject('Object Repository/User Admin/Add User')
-
 JsonSlurper jsonSlurper = new JsonSlurper()
 
 Map signInResponseBody = jsonSlurper.parseText(signInResponse.getResponseBodyContent())
 
 TestObjectProperty authHeader = new TestObjectProperty('Authorization', ConditionType.EQUALS, 'Bearer ' + signInResponseBody.data.token)
+
+RequestObject request = findTestObject('Object Repository/User Admin/Add User')
 
 request.httpHeaderProperties.add(authHeader)
 

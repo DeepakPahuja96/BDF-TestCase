@@ -20,12 +20,20 @@ JsonSlurper jsonSlurper = new JsonSlurper()
 
 Map ObjectResponseBody = jsonSlurper.parseText(response.getResponseBodyContent())
 
-println(ObjectResponseBody)
-
-println(ObjectResponseBody.errors.LastName[0])
+println(ObjectResponseBody.errors.LastName[0].toString())
 
 WS.verifyElementPropertyValue(response, 'title', 'One or more validation errors occurred.')
 
-//WS.verifyElementPropertyValue(ObjectResponseBody.errors, 'LastName', ['The LastName field is required.'])
+WS.verifyElementPropertyValue(response, 'errors.LastName[0]', 'The LastName field is required.')
 
-WS.containsString(ObjectResponseBody.errors.LastName, ['The LastName field is required.'], false)
+String s = String.valueOf(ObjectResponseBody.errors.LastName[0]);
+println(s);
+
+
+
+WS.containsString(response, 'The LastName field is required.', false)
+
+if(s.equals('The LastName field is required.'))
+	{
+		println("Match");
+	}
